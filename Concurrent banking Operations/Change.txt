@@ -1,0 +1,18 @@
+Client-Server Application System
+
+Based on the provided output test cases, it appears that increasing the size of the network buffers from 10 to 20 results in a decrease in the running times for both the client and server threads.
+
+Breakdown of Observed Changes:
+1. **Client Sending Thread**: Running time decreased from 44 milliseconds to 33 milliseconds.
+2. **Client Receiving Thread**: Running time decreased from 45 milliseconds to 34 milliseconds.
+3. **Server Thread**: Running time decreased from 86 milliseconds to 72 milliseconds.
+
+Explanation:
+- Larger network buffers allow for more data to be buffered and transmitted at once, reducing the frequency of network communication overhead.
+- With a buffer size of 20, the client can send larger chunks of data to the server in a single transmission, resulting in fewer total transmissions and decreased latency.
+- Similarly, the server can process larger chunks of data received from the client at once, reducing the processing overhead and consequently reducing the total running time of the server thread.
+
+Summary:
+- The significant difference in running times can be attributed to the impact of network buffer size on the efficiency of data transmission between the client and server.
+- Increasing the size of the network buffers improves the efficiency of data transmission and processing, leading to shorter running times for both client and server threads.
+- The program reads account data, and transaction data from text files stored in a specific directory. Make sure the file paths are correctly set in the code.
